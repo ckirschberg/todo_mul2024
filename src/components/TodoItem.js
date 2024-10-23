@@ -1,11 +1,15 @@
-const todoItemStyle = {
-    color: 'blue',
-    padding: '1.5em',
- }
+
 
 function TodoItem(props) {
+
+    const todoItemStyle = {
+        color: 'blue',
+        padding: '1.5em',
+        textDecoration: props.completed ? 'line-through' : 'none'
+     }
+
     return (
-        <div style={todoItemStyle}>{props.title}</div>
+        <div id={props.id} style={todoItemStyle}>{props.title}</div>
     )
 }
 
