@@ -3,6 +3,7 @@ import './App.css';
 import TodoList from './components/TodoList';
 import Header from './components/Header';
 import MainPage from './components/MainPage';
+import LikeCounter from './components/LikeCounter';
 
 function App() {
   // jsx
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
+        <LikeCounter />
         {/* <MainPage /> */}
         <TodoList />
       </header>
