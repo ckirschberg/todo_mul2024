@@ -1,15 +1,15 @@
 
 
-function TodoItem(props) {
+function TodoItem({ key, title, completed }) {
 
     const todoItemStyle = {
-        color: 'blue',
+        color: 'white',
         padding: '1.5em',
-        textDecoration: props.completed ? 'line-through' : 'none'
+        textDecoration: completed ? 'line-through' : 'none'
      }
 
     return (
-        <div id={props.id} style={todoItemStyle}>{props.title}</div>
+        <div id={key} style={todoItemStyle}>{title}</div>
     )
 }
 
