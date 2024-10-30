@@ -8,8 +8,10 @@ import { add, philip } from './AddTodo'; // import to functioner
 function TodoList() {
     // state: isChristianHappy='getter', setIsChristianHappy='setter'
     const [isChristianHappy, setIsChristianHappy] = useState(true);
-    const [todos, setTodos] = useState([{id: 1, title: "Køb marsvin", completed: false}, 
-        {id: 2, title: "Lav en todo list", completed: true}]);
+    const [todos, setTodos] = useState([
+        {id: 1, title: "Køb marsvin", completed: false, deadline: new Date(2024, 9, 30, 12, 0, 0)}, 
+        {id: 2, title: "Lav en todo list", completed: true, deadline: new Date(2024, 8, 30, 12, 0, 0)}
+    ]);
 
 
     function handleChristianHappy() {
@@ -35,7 +37,12 @@ function TodoList() {
 
             {
                 todos.map(item => {
-                    return <TodoItem key={item.id} title={item.title} completed={item.completed}/>
+                    return <TodoItem 
+                        key={item.id} 
+                        title={item.title} 
+                        completed={item.completed}
+                        deadline={item.deadline}
+                    />
                 })
             }
         </div>

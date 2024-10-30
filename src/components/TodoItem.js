@@ -1,6 +1,8 @@
+import {Banana} from 'lucide-react';
 
+function TodoItem({ key, title, completed, deadline }) {
 
-function TodoItem({ key, title, completed }) {
+    const timestamp = new Date(); //new Date giver dato og tid lige nu.
 
     const todoItemStyle = {
         color: 'white',
@@ -9,7 +11,10 @@ function TodoItem({ key, title, completed }) {
      }
 
     return (
-        <div id={key} style={todoItemStyle}>{title}</div>
+        <div id={key} style={todoItemStyle}>
+            { timestamp > deadline && <Banana /> }
+            {title}
+        </div>
     )
 }
 

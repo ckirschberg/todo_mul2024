@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
         <Header />
         <LikeCounter />
-        {/* <MyModal /> */}
+        <MyModal />
         {/* <MainPage /> */}
         <TodoList />
       </header>
