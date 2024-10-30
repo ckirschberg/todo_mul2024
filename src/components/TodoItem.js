@@ -1,6 +1,6 @@
 import {Banana} from 'lucide-react';
 
-function TodoItem({ key, title, completed, deadline }) {
+function TodoItem({ key, title, completed, deadline, image }) {
 
     const timestamp = new Date(); //new Date giver dato og tid lige nu.
 
@@ -14,6 +14,7 @@ function TodoItem({ key, title, completed, deadline }) {
         <div id={key} style={todoItemStyle}>
             { timestamp > deadline && <Banana /> }
             {title}
+            <img src={image} alt="image"/>
         </div>
     )
 }
