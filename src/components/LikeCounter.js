@@ -12,11 +12,13 @@ function LikeCounter() {
     // }
 
     function handleLikes(add) {
-        setLikes(likes + add);}
+        setLikes(likes + add);
+    }
 
+    // JSX
     return (
         <div>
-            <p>Likes: {likes}</p>
+            <p style={{color: 'white', padding: '1.5em', fontSize: '1.5em'}}>Likes: {likes}</p>
             <button onClick={() => handleLikes(1)}>Like</button>
             <button onClick={() => handleLikes(-1)}>Dislike</button>
         </div>

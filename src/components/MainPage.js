@@ -12,6 +12,7 @@ function MainPage() {
             <h1>Fun facts about React</h1>
 
             {data.map(item => 
+                //const data bliver stylet i Bullit komponenten.
                 <Bullit message={item} size="1.5em" color="yellow"/>
             )}
             
