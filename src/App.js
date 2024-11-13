@@ -5,6 +5,7 @@ import Header from './components/Header';
 import MainPage from './components/MainPage';
 import LikeCounter from './components/LikeCounter';
 import MyModal from './components/MyModal';
+import Signup from './components/Signup';
 
 function App() {
   // jsx
@@ -12,10 +13,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
-        <LikeCounter />
-        <MyModal />
+        <Signup />
+        
+        {/* <LikeCounter />
+        <MyModal /> */}
         {/* <MainPage /> */}
-        <TodoList />
+        {/* <TodoList /> */}
       </header>
     </div>
   );

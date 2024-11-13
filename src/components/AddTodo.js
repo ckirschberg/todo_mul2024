@@ -5,10 +5,10 @@ function AddTodo({todos, setTodos}) {
     const [todo, setTodo] = useState(''); // what the user sees in the input type="text"
     const [error, setError] = useState(null);
 
-    const handleOnTodoChange = (event) => {
-        console.log(event.target.value);
-        setTodo(event.target.value);
-    }
+    // const handleOnTodoChange = (event) => {
+    //     console.log(event.target.value);
+    //     setTodo(event.target.value);
+    // }
 
     function handleAddTodo() {
         if (todo === '') {
@@ -38,7 +38,7 @@ function AddTodo({todos, setTodos}) {
                     type="text" 
                     placeholder="Add todo" 
                     value={todo} 
-                    onChange={handleOnTodoChange} 
+                    onChange={(event) => setTodo(event.target.value)} 
                 />
                 
                 {/* Conditional rendering: Vis kun p-tag hvis error ikke er null */}
