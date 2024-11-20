@@ -12,7 +12,7 @@ function Signup() {
     async function signUpNewUser() {
         console.log("sending to supabase", email, password);
         
-        const { data, error } = await supabase.auth.signUp(
+        const { data, error } = await supabase.auth.signInWithPassword(
             { email: email, password: password,
         //   options: {
         //     emailRedirectTo: 'https://example.com/welcome',
