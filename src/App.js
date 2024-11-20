@@ -6,6 +6,7 @@ import MainPage from './components/MainPage';
 import LikeCounter from './components/LikeCounter';
 import MyModal from './components/MyModal';
 import Signup from './components/Signup';
+import AddTodo from './components/AddTodo';
 
 function App() {
   // jsx
